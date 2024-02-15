@@ -17,7 +17,7 @@ function Navigation() {
         dispatch(logout());
     }
     const unreadNotifications = user?.notifications?.reduce((acc, current) => {
-        if (current.status == "unread") return acc + 1;
+        if (current.status === "unread") return acc + 1;
         return acc;
     }, 0);
 

@@ -43,8 +43,8 @@ function NewProduct() {
     function showWidget() {
         const widget = window.cloudinary.createUploadWidget(
             {
-                cloudName: "learn-code-10",
-                uploadPreset: "dcizdwph",
+                cloudName: "dku8up5ut",
+                uploadPreset: "react_shop",
             },
             (error, result) => {
                 if (!error && result.event === "success") {
@@ -99,7 +99,7 @@ function NewProduct() {
                                 {images.map((image) => (
                                     <div className="image-preview">
                                         <img src={image.url} />
-                                        {imgToRemove != image.public_id && <i className="fa fa-times-circle" onClick={() => handleRemoveImg(image)}></i>}
+                                        {imgToRemove !== image.public_id && <i className="fa fa-times-circle" onClick={() => handleRemoveImg(image)}></i>}
                                     </div>
                                 ))}
                             </div>
